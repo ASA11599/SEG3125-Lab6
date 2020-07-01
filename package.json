@@ -1,0 +1,19 @@
+{
+  "name": "seg3125-lab6",
+  "version": "1.0.0",
+  "description": "Lab 6 for SEG3125",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASA11599/SEG3125-Lab6.git"
+  },
+  "author": "ASA11599",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASA11599/SEG3125-Lab6/issues"
+  },
+  "homepage": "https://github.com/ASA11599/SEG3125-Lab6#readme"
+}

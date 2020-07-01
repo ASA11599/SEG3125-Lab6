@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Survey analysis</title>
+</head>
+<body>
+    <h1>Survey analysis</h1>
+    <h2 class="q"></h2>
+    <p class="a"></p>
+    <h2 class="q"></h2>
+    <p class="a"></p>
+    <h2 class="q"></h2>
+    <p class="a"></p>
+    <h2 class="q"></h2>
+    <p class="a"></p>
+    <h2 class="q"></h2>
+    <p class="a"></p>
+    <h2 class="q"></h2>
+    <p class="a"></p>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function (err) {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+                    const questions = document.querySelectorAll(".q");
+                    const answers = document.querySelectorAll(".a");
+                    const res = JSON.parse(xhr.responseText);
+                    for (let i = 0; i < 6; i++) {
+                        questions[i].innerHTML = res[i]["question"];
+                        for (ans of res[i]["answers"]) {
+                            answers[i].innerHTML += ans + "<br>";
+                        }
+                    }
+                } else {
+                    console.log("XHR failed, status code not 200");
+                }
+            }
+        };
+        xhr.open("GET", "http://localhost:3000/api/");
+        xhr.send();
+    </script>
+</body>
+</html>

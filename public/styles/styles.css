@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, label, p {
+    font-family: 'Comfortaa', cursive;
+}
+
+button.block {
+    display: block;
+    width: 25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+#carousel {
+    padding: 25px;
+    text-align: center;
+    width: 75%;
+}
+
+#likert > label{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#carousel > #arrows {
+    text-align: center;
+    display: inline;
+}
+
+#carousel > #arrows > i{
+    font-size: xx-large;
+}
+
+#carousel > #arrows :hover {
+    cursor: pointer;
+}
+
+#carousel #arrows i {
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form .form-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+form .question h2 strong {
+    color: red;
+}
+
+form .form-section button#submitButton :hover {
+    cursor: pointer;
+}
+
+.container {
+    background-color: burlywood;
+    padding: 20px;
+}
